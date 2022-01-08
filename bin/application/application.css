@@ -1,0 +1,68 @@
+
+.root{
+	-fx-background-color: #CAD9E1;
+	
+	
+	
+	-fx-base: #9ec7de;
+    -fx-accent: #0096c9 ;
+    -fx-focus-color: #039ed3;
+    -fx-faint-focus-color: #a8d4e6;
+ 
+
+	
+}
+
+
+
+.table-column {
+  -fx-alignment: CENTER;
+}
+
+.anchorpane{
+	-fx-background-color: #ffffff;
+}
+
+.button{
+	/**-fx-background-color: #000000, linear-gradient(#28638a, #263e75),linear-gradient(#4e9ed4, #2b7cb3);
+	-fx-background-insets: 2,2,2,2;
+	-fx-background-radius: 2,2,2,2; 
+	-fx-padding: 15 25 15 25;
+	-fx-font-size: 12px;
+	-fx-text-fill: white;**/
+	-fx-pref-height: 38px;
+    -fx-pref-width: 160px;
+
+    -fx-background-color: transparent;
+    -fx-background-radius: .0em,.0em,.0em,.0em;
+
+ 
+}
+
+.button:hover {
+  -fx-background-color: #60b4f0;
+} 
+
+
+.button:pressed{
+  -fx-background-color: #28638a;
+}
+
+.vbox {
+	-fx-background-color: transparent;
+}
+
+ellipse:hover{
+	-fx-cursor: hand;
+}
+
+
+#deleteButton .button{
+	-fx-background-color: #000000, linear-gradient(#28638a, #263e75),linear-gradient(#4e9ed4, #2b7cb3);
+	-fx-background-insets: 2,2,2,2;
+	-fx-background-radius: 2,2,2,2; 
+	-fx-padding: 15 25 15 25;
+	-fx-font-size: 12px;
+	-fx-text-fill: white;
+}
+

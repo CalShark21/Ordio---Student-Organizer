@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <children>
+      
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="160.0" spacing="3.0" stylesheets="@application.css">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="143.0">
+               <image>
+                  <Image url="@Logo3.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #1b90e3;" stylesheets="@application.css" text="Main Menu" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Button>
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#addCourseButton" prefHeight="35.0" prefWidth="160.0" stylesheets="@application.css" text="Add Courses" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#gpaCalc" prefHeight="35.0" prefWidth="160.0" text="Calculate GPA" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#openToDoScene" prefHeight="35.0" prefWidth="160.0" text="To-Do Organizer" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#openCalendar" prefHeight="35.0" prefWidth="160.0" text="Calendar" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="courseSchedule" layoutX="416.0" layoutY="117.0" prefHeight="180.0" prefWidth="470.0" />
+      <Separator layoutX="160.0" layoutY="111.0" orientation="VERTICAL" prefHeight="430.0" prefWidth="0.0" />
+      <Label layoutX="581.0" layoutY="82.0" text="Your Class Schedule">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="117.0" text="Current Semester Grade: ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="semesterGPA" layoutX="277.0" layoutY="142.0" text="3.56">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <GridPane fx:id="weekGrid" gridLinesVisible="true" layoutX="167.0" layoutY="403.0" prefHeight="116.0" prefWidth="727.0" style="-fx-background-color: #ECECEC;">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="19.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="dayLabel0" alignment="CENTER" prefHeight="47.0" prefWidth="113.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel1" alignment="CENTER" prefHeight="43.0" prefWidth="125.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel2" alignment="CENTER" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel3" alignment="CENTER" prefHeight="54.0" prefWidth="130.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel4" alignment="CENTER" layoutX="312.0" layoutY="8.0" prefHeight="70.0" prefWidth="176.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel5" alignment="CENTER" layoutX="413.0" layoutY="8.0" prefHeight="68.0" prefWidth="167.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel6" alignment="CENTER" prefHeight="72.0" prefWidth="153.0" style="-fx-background-color: #ECECEC;" text="Sunday" textAlignment="CENTER" GridPane.columnIndex="6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vbox0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox1" layoutX="13.0" layoutY="32.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox2" layoutX="116.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox3" layoutX="222.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox4" layoutX="322.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox5" layoutX="427.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vbox6" layoutX="532.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #ECECEC;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </GridPane>
+      <Label layoutX="440.0" layoutY="352.0" text="Your Week:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="35.0" prefWidth="900.0">
+         <children>
+            <AnchorPane prefHeight="35.0" prefWidth="967.0">
+               <children>
+                  <Ellipse fill="#ff1557" layoutX="883.0" layoutY="18.0" radiusX="5.0" radiusY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" visible="false" />
+                  <Ellipse fill="#3df550" layoutX="867.0" layoutY="18.0" radiusX="5.0" radiusY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" visible="false" />
+                  <Ellipse fill="#ffb970" layoutX="851.0" layoutY="18.0" radiusX="5.0" radiusY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      
+   </children>
+</AnchorPane>
